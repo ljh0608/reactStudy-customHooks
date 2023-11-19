@@ -11,6 +11,7 @@ const UseRouterPage = () => {
       <RouterBtn onClick={() => routeTo("/useOutSideClick")}>
         go to useOutSideClick
       </RouterBtn>
+      <RouterBtn onClick={() => routeTo("/useDebounce")}>useDebounce</RouterBtn>
     </UseRouterPageWrapper>
   );
 };

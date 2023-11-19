@@ -5,19 +5,14 @@ const DebouncedInput = () => {
 
   const [debouncedValue, setDebouncedValue] = useState<string>(value);
   const [longDebouncedValue, setLongDebouncedValue] = useState<string>(value);
-  useEffect(() => {
-    const timer = setTimeout(() => setDebouncedValue(value), 500);
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [value, 500]);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setLongDebouncedValue(value), 2000);
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [value, 1000]);
+  //debounce 로직을 넣어주세요!
+  //   useEffect(() => {
+  //     const timer = setTimeout(() => setDebouncedValue(value), 500);
+  //     return () => {
+  //       clearTimeout(timer);
+  //     };
+  //   }, [value]);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
